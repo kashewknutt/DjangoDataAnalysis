@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <div id="dashboard"></div>
+    <script>
+        fetch('/dashboard/api/data/')
+            .then(response => response.json())
+            .then(data => {
+                // Use D3.js or other libraries to visualize the data
+                console.log(data);
+                // Example visualization code
+            });
+    </script>
+</body>
+</html>
