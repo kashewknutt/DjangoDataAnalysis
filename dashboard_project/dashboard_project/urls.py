@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.urls import include, path
 
-from dashboard_project.dashboard_app import admin
+from django.contrib import admin
 
 urlpatterns = [
     path('dashboard/', include('dashboard_app.urls')),
