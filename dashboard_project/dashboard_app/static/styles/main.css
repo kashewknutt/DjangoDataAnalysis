@@ -1,0 +1,45 @@
+/* Reset and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container-fluid {
+    padding: 0 20px;
+}
+
+.chart-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Bar Chart */
+.bar {
+    fill: steelblue;
+    transition: fill 0.2s ease;
+}
+
+.bar:hover {
+    fill: #4CAF50;
+}
+
+/* Pie Chart */
+.pie-slice {
+    cursor: pointer;
+    transition: fill 0.2s ease;
+}
+
+.pie-slice:hover {
+    fill: #FBC02D;
+}

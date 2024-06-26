@@ -1,21 +1,41 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Visualization Dashboard</title>
-    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
 </head>
 <body>
-    <div id="dashboard"></div>
-    <script>
-        fetch('/dashboard/api/data/')
-            .then(response => response.json())
-            .then(data => {
-                // Use D3.js or other libraries to visualize the data
-                console.log(data);
-                // Example visualization code
-            });
-    </script>
+    <div class="container-fluid mt-4">
+        <h1 class="text-center mb-4">Data Visualization Dashboard</h1>
+        <!-- Visualization Section -->
+        <div class="row">
+            <!-- Bar Chart -->
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h2 class="chart-title">Bar Chart</h2>
+                    <svg id="bar-chart" class="chart"></svg>
+                </div>
+            </div>
+            <!-- Pie Chart -->
+            <div class="col-md-6">
+                <div class="chart-container">
+                    <h2 class="chart-title">Pie Chart</h2>
+                    <svg id="pie-chart" class="chart"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{% static 'scripts/main.js' %}"></script>
 </body>
 </html>
